@@ -226,3 +226,93 @@ body, html {
     border: none; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Un toque de sombra para que resalte */
 }
+
+.timeline-section {
+    padding: 100px 20px;
+    background-color: #f8fafc;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #0f172a;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* La línea central */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #e2e8f0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* Bolita en la línea */
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    background-color: #fff;
+    border: 3px solid #3b82f6;
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+/* Diferenciación de lados (Zig-Zag) */
+.timeline-item.work { left: 0; text-align: right; }
+.timeline-item.education { left: 50%; text-align: left; }
+.timeline-item.project { left: 0; text-align: right; }
+
+.education .timeline-dot {
+    left: -8px;
+    border-color: #8b5cf6; /* Morado para educación */
+}
+
+/* Tarjetas de contenido */
+.timeline-content {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.date {
+    font-weight: bold;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* Colores de títulos según tipo */
+.work h3 { color: #3b82f6; margin: 5px 0; }
+.education h3 { color: #8b5cf6; margin: 5px 0; }
+
+/* Responsivo para móviles */
+@media screen and (max-width: 600px) {
+    .timeline-container::after { left: 31px; }
+    .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left !important; }
+    .timeline-dot { left: 22px !important; }
+}
