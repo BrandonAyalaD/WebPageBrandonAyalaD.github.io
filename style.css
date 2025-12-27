@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 /* 1. CONFIGURACIÓN BASE Y RESET */
 :root {
     --bg-light: #f8fafc;
