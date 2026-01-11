@@ -27,7 +27,11 @@ body, html {
     z-index: -1;
     background: radial-gradient(circle at top right, #eef2ff 0%, #f8fafc 100%);
 }
-
+.nav-link.active {
+    color: var(--accent-blue);
+    border-left: 20px solid var(--accent-blue);
+    padding-left: 10px;
+}
 header {
     position: fixed;
     top: 0; width: 100%; padding: 30px;
@@ -314,3 +318,76 @@ header {
         grid-template-columns: 1fr; /* Una sola columna en móvil */
     }
 }
+
+/* --- ESTILOS PÁGINA DE PROYECTOS --- */
+.projects-page {
+    padding-top: 120px; /* Espacio para el header fijo */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-inline: 20px;
+}
+
+.hero-mini {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero-mini h1 { font-size: 2.5rem; color: var(--text-dark); }
+.hero-mini p { color: var(--text-gray); font-size: 1.1rem; }
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.08);
+}
+
+.project-card .tag {
+    font-size: 10px;
+    color: var(--accent-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-card h3 { margin: 15px 0; color: var(--text-dark); }
+.project-card p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.6; }
+
+.btn-project {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--accent-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.btn-project:hover {
+    border-bottom-color: var(--accent-blue);
+}
+
+/* Enlace extra en el nav */
+.nav-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+.nav-link:hover { opacity: 1; }
