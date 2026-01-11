@@ -15,25 +15,55 @@
         </nav>
     </header>
 
-    <main class="projects-page">
-        <section class="hero-mini">
-            <h1 class="nav-logo">Building in Public</h1>
-            <p>Solutions designed and developed during my creative sprints.</p>
-        </section>
+   <main class="projects-page">
+    <section class="hero-mini">
+        <h1 class="project-title-main">Building in Public</h1>
+        <p>Solutions designed and developed during my creative sprints.</p>
+    </section>
 
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-info">
-                    <span class="tag">AI & Operations</span>
-                    <h3>Geo-Action Automator:</h3>
-                    <p><b>The Challenge</b>: Designing a real-time notification system independent of paid third-party applications by bridging physical GPS location data with cloud-based workflows.<br>
-                          <b>The Solution</b>: I developed a custom infrastructure leveraging mobile Geofencing to trigger events via Webhooks to the GitHub API. Once the signal is received, a GitHub Actions workflow processes the metadata (location, timestamp, and movement type) and distributes automated notifications via SMTP to a defined group of recipients.<br>
-                          <b>The Impact</b>: A fully autonomous, cost-free, and scalable system that demonstrates the power of "headless" automation and seamless hardware-to-cloud integration.</p>
-                    <a href="#" class="btn-project">Ver Repositorio</a>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-header">
+                <span class="tag">AI & Operations</span>
+                <div class="tech-stack">
+                    <span class="tech-pill">GitHub Actions</span>
+                    <span class="tech-pill">Webhooks</span>
+                    <span class="tech-pill">SMTP</span>
+                    <span class="tech-pill">Geofencing</span>
                 </div>
             </div>
-            
+
+            <div class="project-info">
+                <h3>Geo-Action Automator</h3>
+                
+                <div class="project-stats">
+                    <div class="stat-item"><strong>Cost:</strong> $0</div>
+                    <div class="stat-item"><strong>Status:</strong> Live</div>
+                </div>
+
+                <p>
+                    <span class="desc-label">The Challenge:</span> 
+                    Designing a real-time notification system independent of paid third-party applications by bridging physical GPS location data with cloud-based workflows.
+                </p>
+                <p>
+                    <span class="desc-label">The Solution:</span> 
+                    I developed a custom infrastructure leveraging mobile Geofencing to trigger events via Webhooks to the GitHub API. A GitHub Actions workflow processes metadata and distributes notifications.
+                </p>
+                <p>
+                    <span class="desc-label">The Impact:</span> 
+                    A fully autonomous, cost-free, and scalable system demonstrating seamless hardware-to-cloud integration.
+                </p>
+
+                <div class="project-links">
+                    <a href="#" class="btn-primary">View Repository</a>
+                    <a href="#" class="btn-project">Documentation →</a>
+                </div>
             </div>
+        </div>
+        
+        </div>
+            
+     
     </main>
 
     <footer class="main-footer">
